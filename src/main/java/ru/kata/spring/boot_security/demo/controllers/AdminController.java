@@ -43,7 +43,6 @@ public class AdminController {
 
         model.addAttribute("user", userServise.getUserById(id));
 
-//        return "edit";
         return "redirect:/admin";
     }
 
@@ -60,7 +59,6 @@ public class AdminController {
     public String deleteUser(Model model, @PathVariable("id") int id) {
         model.addAttribute("user", userServise.getUserById(id));
 
-//        return "delete";
         return "redirect:/admin";
     }
     @DeleteMapping("admin/{id}")

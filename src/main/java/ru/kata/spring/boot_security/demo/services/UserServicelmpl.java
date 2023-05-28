@@ -69,8 +69,6 @@ public class UserServicelmpl implements UserServise, UserDetailsService {
     @Override
     public User getUserById(int id) {
 
-//        Optional<User> foundUser = userRepository.findById(id);
-//        return foundUser.orElse(null);
         return userRepository.getById(id);
     }
     @Override

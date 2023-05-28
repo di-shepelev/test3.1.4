@@ -28,8 +28,6 @@ public class UserController {
     @GetMapping(value = "/user")
     public String updateUser(Principal principal, Model model) {
 
-//        User user = userDetailService.findByEmail(principal.getName());
-
         User user = userServise.findByUsername(principal.getName());
 
         model.addAttribute("user", user);
