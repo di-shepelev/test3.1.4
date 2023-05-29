@@ -53,19 +53,17 @@
                 <thead>
                 <tr class="table-light">
                     <th scope="col">Id</th>
-                    <th scope="col">username</th>
-                    <th scope="col">Password</th>
-                    <th scope="col">email</th>
-                    <th scope="col">role</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Role</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr class="table-secondary">
                     <td th:utext="${user.getId()}"></td>
                     <td th:utext="${user.getUsername()}"></td>
-                    <td th:utext="${user.getPassword()}"></td>
                     <td th:utext="${user.getEmail()}"></td>
-                    <td th:utext="${user.getRoles()}"></td>
+                    <td th:utext="${user.rolesToString()}"></td>
                 </tr>
                 </tbody>
             </table>

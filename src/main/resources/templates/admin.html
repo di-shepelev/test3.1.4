@@ -70,7 +70,6 @@
                 <tr>
                     <th scope="col">Id</th>
                     <th scope="col">Username</th>
-                    <th scope="col">Password</th>
                     <th scope="col">Email</th>
                     <th scope="col">Role</th>
                     <th scope="col">Edit</th>
@@ -81,9 +80,8 @@
                 <tr th:each="user: ${listUsers}">
                     <td th:text="${user.getId()}"/>
                     <td th:text="${user.getUsername()}"/>
-                    <td th:text="${user.getPassword()}"/>
                     <td th:text="${user.getEmail()}"/>
-                    <td th:text="${user.getRoles()}"/>
+                    <td th:text="${user.rolesToString()}"/>
                     <td>
                         <button type="button" class="btn btn-light text-light" style="background-color: #17a2b8;" data-bs-toggle="modal" th:attr="data-bs-target='#edit-form' + ${user.getId()}">
                             Edit

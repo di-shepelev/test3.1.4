@@ -6,6 +6,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import javax.persistence.*;
 import java.util.Collection;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Entity
 @Table(name = "users")
@@ -90,5 +91,10 @@ public class User {
         this.roles = roles;
     }
 
+    public String rolesToString() {
+        return roles.stream()
+                .map(r -> r.getName().substring(5)).sorted()
+                .collect(Collectors.joining("  "));
+    }
 
 }
